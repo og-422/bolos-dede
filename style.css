@@ -1,0 +1,443 @@
+/* 1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS */
+:root {
+    --color-bg: #fdf2f8; /* rose-50 */
+    --color-bg-alt: #ffffff;
+    --color-bg-soft: #fce7f3; /* rose-100 */
+    --color-bg-footer: #fecdd3; /* rose-200 */
+    --color-text-base: #292524; /* stone-800 */
+    --color-text-muted: #57534e; /* stone-600 */
+    --color-primary: #ec4899; /* pink-500 */
+    --color-primary-dark: #db2777; /* pink-600 */
+    --color-primary-light: #fbcfe8; /* pink-200 */
+    --color-primary-extralight: #fce7f3; /* pink-100 */
+    --color-primary-text: #c026d3; /* pink-600 text over pink-100 */
+    --color-whatsapp: #25d366; /* green-500 */
+    --color-whatsapp-dark: #16a34a; /* green-600 */
+
+    --font-primary: 'Inter', sans-serif;
+    --font-display: 'Pacifico', cursive;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-base);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* 2. UTILITÁRIOS E COMPONENTES GERAIS */
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 768px) {
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* 3. CABEÇALHO E NAVEGAÇÃO */
+.header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.main-nav {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .main-nav { display: flex; }
+}
+
+.nav-link {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-button-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+.nav-button-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+}
+.icon-button:hover {
+    color: var(--color-primary);
+}
+.mobile-menu-toggle {
+    display: block;
+}
+@media (min-width: 768px) {
+    .mobile-menu-toggle { display: none; }
+}
+
+.mobile-menu {
+    background-color: white;
+}
+.mobile-nav-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+}
+.mobile-nav-link:hover {
+    background-color: var(--color-bg-soft);
+}
+.mobile-nav-button {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* 4. SEÇÕES PRINCIPAIS */
+.section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.bg-white {
+    background-color: var(--color-bg-alt);
+}
+.bg-rose-100 {
+    background-color: var(--color-bg-soft);
+}
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text-base);
+}
+.section-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 3rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 5. SEÇÃO HERO */
+.hero-section {
+    height: calc(80vh - 80px); /* 80px is header height */
+    background-image: url('https://placehold.co/1920x1080/fce7f3/d946ef?text=Bolo+Delicioso');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 42rem;
+    margin: 0 auto;
+}
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 3.75rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-base);
+    margin-bottom: 2rem;
+}
+
+/* 6. BOTÕES */
+.button-primary {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.button-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: scale(1.05);
+}
+.button-secondary {
+    background-color: var(--color-primary-extralight);
+    color: var(--color-primary-text);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.button-secondary:hover {
+    background-color: var(--color-primary-light);
+}
+.button-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-whatsapp);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.button-whatsapp:hover {
+    background-color: var(--color-whatsapp-dark);
+    transform: scale(1.05);
+}
+
+
+/* 7. CARDS (Categoria e Produto) */
+.category-card {
+    display: block;
+    text-decoration: none;
+}
+.category-card-image-wrapper {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.category-card-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.category-card:hover .category-card-image {
+    transform: scale(1.1);
+}
+.category-card-title {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-base);
+}
+.category-card:hover .category-card-title {
+    color: var(--color-primary);
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.product-card-image {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+}
+.product-card-content {
+    padding: 1.5rem;
+}
+.product-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.product-card-description {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    min-height: 50px;
+}
+.product-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-card-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* 8. SEÇÃO SOBRE NÓS */
+.about-us-grid {
+    display: grid;
+    align-items: center;
+    gap: 3rem;
+}
+@media (min-width: 768px) {
+    .about-us-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.about-us-image-container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.about-us-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-us-content .section-title {
+    text-align: left;
+}
+
+.about-us-text {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* 9. RODAPÉ */
+.footer {
+    background-color: var(--color-bg-footer);
+    color: var(--color-text-muted);
+}
+.footer .container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.footer-grid {
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        text-align: left;
+    }
+}
+.footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+}
+.footer-tagline {
+    font-size: 0.875rem;
+}
+.footer-col-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-text-base);
+}
+.footer-links, .footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li, .footer-contact li {
+    margin-bottom: 0.5rem;
+}
+.footer-links a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: var(--color-primary-dark);
+}
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .footer-socials { justify-content: flex-start; }
+}
+.footer-socials a {
+    color: var(--color-text-muted);
+}
+.footer-socials a:hover {
+    color: var(--color-primary-dark);
+}
+.footer-copyright {
+    border-top: 1px solid var(--color-primary-light);
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+

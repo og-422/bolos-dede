@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolos da Dedé - O Sabor do Carinho</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- Folha de Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Biblioteca de Ícones (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                Bolos da Dedé
+            </a>
+            <nav class="main-nav">
+                <a href="#bolos" class="nav-link">Bolos</a>
+                <a href="#salgados" class="nav-link">Salgados</a>
+                <a href="#doces" class="nav-link">Doces</a>
+                <a href="#kits" class="nav-link">Kits Presente</a>
+                <a href="#sobre-nos" class="nav-link">Sobre Nós</a>
+                <a href="#contato" class="nav-button-primary">Faça seu Pedido</a>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-button">
+                    <i data-lucide="shopping-cart"></i>
+                </button>
+                <button id="menu-btn" class="icon-button mobile-menu-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="#bolos" class="mobile-nav-link">Bolos</a>
+            <a href="#salgados" class="mobile-nav-link">Salgados</a>
+            <a href="#doces" class="mobile-nav-link">Doces</a>
+            <a href="#kits" class="mobile-nav-link">Kits Presente</a>
+            <a href="#sobre-nos" class="mobile-nav-link">Sobre Nós</a>
+            <a href="#contato" class="mobile-nav-button">Faça seu Pedido</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">O sabor do carinho</h1>
+                    <p class="hero-subtitle">Bolos, doces e salgados feitos com ingredientes selecionados e uma dose extra de amor para seus momentos mais especiais.</p>
+                    <a href="#bolos" class="button-primary">Ver Cardápio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Categorias -->
+        <section id="categorias" class="section bg-white">
+            <div class="container text-center">
+                <h2 class="section-title">Nossas Delícias</h2>
+                <p class="section-subtitle">Explore nossas categorias e encontre o produto perfeito para sua festa, seu café da tarde ou para presentear quem você ama.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Categoria Bolos -->
+                    <a href="#bolos" class="category-card">
+                        <div class="category-card-image-wrapper">
+                            <img src="./imagens/bolos-logo.png" alt="Bolos" class="category-card-image">
+                        </div>
+                        <h3 class="category-card-title">Bolos de Festa</h3>
+                    </a>
+                    <!-- Categoria Salgados -->
+                    <a href="#salgados" class="category-card">
+                        <div class="category-card-image-wrapper">
+                            <img src="./imagens/salgados.jpg" alt="Salgados" class="category-card-image">
+                        </div>
+                        <h3 class="category-card-title">Salgados para Festa</h3>
+                    </a>
+                    <!-- Categoria Doces -->
+                    <a href="#doces" class="category-card">
+                         <div class="category-card-image-wrapper">
+                           <img src="./imagens/doces1.png" alt="Doces" class="category-card-image">
+                        </div>
+                        <h3 class="category-card-title">Docinhos Irresistíveis</h3>
+                    </a>
+                    <!-- Categoria Kits -->
+                    <a href="#kits" class="category-card">
+                        <div class="category-card-image-wrapper">
+                           <img src="./imagens/kit-presente.png" alt="Kits" class="category-card-image">
+                        </div>
+                        <h3 class="category-card-title">Kits Presente</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Bolos -->
+        <section id="bolos" class="section">
+            <div class="container">
+                <h2 class="section-title text-center">Bolos Artesanais</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Produto 1 -->
+                    <div class="product-card">
+                        <img src="./imagens/bolo1.png" class="product-card-image" alt="Bolo de Ninho com Morango">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Bolo Aniversario</h3>
+                            <p class="product-card-description">Massa de baunilha fofinha, recheio cremoso de leite ninho com morangos frescos.</p>
+                            <div class="product-card-footer">
+                                <span class="product-card-price">R$ 89,90</span>
+                                <button class="button-secondary">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produto 2 -->
+                    <div class="product-card">
+                        <img src="./imagens/bolo2.png" class="product-card-image" alt="Bolo de Brigadeiro Gourmet">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Bolo Meme Gourmet</h3>
+                            <p class="product-card-description">Massa de chocolate molhadinha com recheio e cobertura de brigadeiro belga.</p>
+                            <div class="product-card-footer">
+                                <span class="product-card-price">R$ 79,90</span>
+                                <button class="button-secondary">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produto 3 -->
+                    <div class="product-card">
+                        <img src="./imagens/bolo3.png" class="product-card-image" alt="Bolo Red Velvet">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Bolo customizável</h3>
+                            <p class="product-card-description">O clássico aveludado vermelho com um recheio suave de cream cheese frosting.</p>
+                            <div class="product-card-footer">
+                                <span class="product-card-price">R$ 99,90</span>
+                                <button class="button-secondary">Pedir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seções Salgados, Doces e Kits -->
+        <section id="salgados" class="section bg-white text-center">
+            <div class="container">
+                <h2 class="section-title">Salgados para Festa</h2>
+                <p class="section-subtitle">Coxinhas, bolinhas de queijo, esfihas e muito mais. Peça o cento!</p>
+                <a href="#contato" class="button-primary">Ver Opções</a>
+            </div>
+        </section>
+
+        <section id="doces" class="section text-center">
+            <div class="container">
+                <h2 class="section-title">Docinhos Irresistíveis</h2>
+                <p class="section-subtitle">Brigadeiros gourmet, beijinhos, camafeus e outras delícias para sua comemoração.</p>
+                <a href="#contato" class="button-primary">Ver Opções</a>
+            </div>
+        </section>
+
+        <section id="kits" class="section bg-white text-center">
+            <div class="container">
+                <h2 class="section-title">Kits Presente e Festa</h2>
+                <p class="section-subtitle">Surpreenda quem você ama ou organize sua festa com nossos kits completos.</p>
+                 <a href="#contato" class="button-primary">Montar meu Kit</a>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section id="sobre-nos" class="section">
+            <div class="container">
+                <div class="about-us-grid">
+                    <div class="about-us-image-container">
+                        <img src="https://placehold.co/600x600/fbcfe8/be185d?text=Dedé" alt="Foto da Dedé" class="about-us-image">
+                    </div>
+                    <div class="about-us-content">
+                        <h2 class="section-title text-left">Nossa História</h2>
+                        <p class="about-us-text">Olá! Eu sou a Adelia e desde criança sou apaixonada por criar doces que trazem alegria. O que começou como uma brincadeira na cozinha da minha Mãe, com receitas passadas de geração em geração, se tornou a minha grande paixão e profissão.</p>
+                        <p class="about-us-text">Na "Bolos da Dedé", cada receita é feita com os melhores ingredientes, muito cuidado e uma dose extra de carinho. Acreditamos que um bolo pode transformar um dia comum em uma celebração e um momento especial em uma memória inesquecível. Obrigada por nos deixar fazer parte da sua história!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="section bg-rose-100 text-center">
+            <div class="container">
+                 <h2 class="section-title">Faça seu pedido!</h2>
+                 <p class="section-subtitle">Entre em contato pelo WhatsApp para orçamentos, tirar dúvidas ou montar um pedido especial. Será um prazer atender você!</p>
+                 <a href="https://wa.me/5511980156853?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20pelo%20site%20Bolos%20da%20Dedé." target="_blank" class="button-whatsapp">
+                    <i data-lucide="whatsapp"></i>
+                    <span>Pedir no WhatsApp</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">Bolos da Dedé</h3>
+                    <p class="footer-tagline">O sabor do carinho em cada fatia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="#bolos">Bolos</a></li>
+                        <li><a href="#salgados">Salgados</a></li>
+                        <li><a href="#doces">Doces</a></li>
+                        <li><a href="#kits">Kits</a></li>
+                        <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-col">
+                    <h4 class="footer-col-title">Contato</h4>
+                    <ul class="footer-contact">
+                        <li>WhatsApp: (11) 98015-6853</li>
+                        <li>Email: contato@bolosdadede.com.br</li>
+                    </ul>
+                </div>
+                 <div class="footer-col">
+                    <h4 class="footer-col-title">Siga-nos</h4>
+                    <div class="footer-socials">
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Bolos da Dedé. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

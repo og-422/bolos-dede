@@ -1,50 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolos da Dedé - O Sabor do Carinho</title>
-    
-    <!-- Google Fonts -->
+    <title>Bolos da Dedé - O sabor do carinho</title>
+    <meta name="description" content="Bolos artesanais, bolos de pote, doces e kits para festa. Feitos com amor e os melhores ingredientes.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
-    
-    <!-- Folha de Estilos CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Biblioteca de Ícones (Lucide) -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-
-    <!-- Cabeçalho e Navegação -->
     <header class="header">
         <div class="container nav-container">
-            <a href="#" class="logo">
-                Bolos da Dedé
-            </a>
+            <a href="#" class="logo">Bolos da Dedé</a>
             <nav class="main-nav">
                 <a href="#bolos" class="nav-link">Bolos</a>
-                <a href="#salgados" class="nav-link">Salgados</a>
+                <a href="#bolos-de-pote" class="nav-link">Bolos de Pote</a>
                 <a href="#doces" class="nav-link">Doces</a>
                 <a href="#kits" class="nav-link">Kits Presente</a>
                 <a href="#sobre-nos" class="nav-link">Sobre Nós</a>
                 <a href="#contato" class="nav-button-primary">Faça seu Pedido</a>
             </nav>
             <div class="header-icons">
-                <button class="icon-button">
-                    <i data-lucide="shopping-cart"></i>
-                </button>
-                <button id="menu-btn" class="icon-button mobile-menu-toggle">
+                <button class="icon-button mobile-menu-toggle" id="menu-btn">
                     <i data-lucide="menu"></i>
                 </button>
             </div>
         </div>
-        <!-- Menu Mobile -->
         <div id="mobile-menu" class="mobile-menu hidden">
             <a href="#bolos" class="mobile-nav-link">Bolos</a>
-            <a href="#salgados" class="mobile-nav-link">Salgados</a>
+            <a href="#bolos-de-pote" class="mobile-nav-link">Bolos de Pote</a>
             <a href="#doces" class="mobile-nav-link">Doces</a>
             <a href="#kits" class="mobile-nav-link">Kits Presente</a>
             <a href="#sobre-nos" class="mobile-nav-link">Sobre Nós</a>
@@ -53,126 +41,175 @@
     </header>
 
     <main>
-        <!-- Seção Hero -->
         <section class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">O sabor do carinho</h1>
-                    <p class="hero-subtitle">Bolos, doces e salgados feitos com ingredientes selecionados e uma dose extra de amor para seus momentos mais especiais.</p>
-                    <a href="#bolos" class="button-primary">Ver Cardápio</a>
-                </div>
+            <div class="hero-content">
+                <h1 class="hero-title">O sabor do carinho</h1>
+                <p class="hero-subtitle">Bolos artesanais feitos com os melhores ingredientes para adoçar seus momentos mais especiais.</p>
+                <a href="#bolos" class="button-primary">Ver Cardápio</a>
             </div>
         </section>
 
-        <!-- Seção de Categorias -->
-        <section id="categorias" class="section bg-white">
-            <div class="container text-center">
+        <section id="categorias" class="section text-center">
+            <div class="container">
                 <h2 class="section-title">Nossas Delícias</h2>
-                <p class="section-subtitle">Explore nossas categorias e encontre o produto perfeito para sua festa, seu café da tarde ou para presentear quem você ama.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Categoria Bolos -->
+                <p class="section-subtitle">Explore nossas categorias e encontre o doce perfeito para cada ocasião.</p>
+                <div class="grid lg:grid-cols-4 md:grid-cols-2">
                     <a href="#bolos" class="category-card">
                         <div class="category-card-image-wrapper">
-                            <img src="./imagens/bolos-logo.png" alt="Bolos" class="category-card-image">
+                            <img src="./imagens/bolos-logo.png" alt="Bolos de Aniversário" class="category-card-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fbcfe8/be185d?text=Bolos';">
                         </div>
-                        <h3 class="category-card-title">Bolos de Festa</h3>
+                        <h3 class="category-card-title">Bolos Festivos</h3>
                     </a>
-                    <!-- Categoria Salgados -->
-                    <a href="#salgados" class="category-card">
+                    <a href="#bolos-de-pote" class="category-card">
                         <div class="category-card-image-wrapper">
-                            <img src="./imagens/salgados.jpg" alt="Salgados" class="category-card-image">
+                            <img src="./imagens/bolos-pote.png" alt="Bolos de Pote" class="category-card-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fbcfe8/be185d?text=Bolos+de+Pote';">
                         </div>
-                        <h3 class="category-card-title">Salgados para Festa</h3>
+                        <h3 class="category-card-title">Delícias no Pote</h3>
                     </a>
-                    <!-- Categoria Doces -->
                     <a href="#doces" class="category-card">
-                         <div class="category-card-image-wrapper">
-                           <img src="./imagens/doces1.png" alt="Doces" class="category-card-image">
+                        <div class="category-card-image-wrapper">
+                            <img src="./imagens/doces1.png" alt="Doces para festas" class="category-card-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fbcfe8/be185d?text=Doces';">
                         </div>
                         <h3 class="category-card-title">Docinhos Irresistíveis</h3>
                     </a>
-                    <!-- Categoria Kits -->
                     <a href="#kits" class="category-card">
                         <div class="category-card-image-wrapper">
-                           <img src="./imagens/kit-presente.png" alt="Kits" class="category-card-image">
+                            <img src="./imagens/kit-presente.png" alt="Kits para presente" class="category-card-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fbcfe8/be185d?text=Kits';">
                         </div>
-                        <h3 class="category-card-title">Kits Presente</h3>
+                        <h3 class="category-card-title">Kits para Presentear</h3>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Bolos -->
-        <section id="bolos" class="section">
+        <section id="bolos" class="section text-center">
             <div class="container">
-                <h2 class="section-title text-center">Bolos Artesanais</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Produto 1 -->
+                <h2 class="section-title">Bolos Festivos</h2>
+                <p class="section-subtitle">Encomende seu bolo personalizado! Para ver nosso catálogo completo, chame no WhatsApp.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3">
                     <div class="product-card">
-                        <img src="./imagens/bolo1.png" class="product-card-image" alt="Bolo de Ninho com Morango">
+                        <img src="./imagens/bolo1.png" alt="Bolo Ninho com Morango" class="product-card-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fbcfe8/be185d?text=Bolo+1';">
                         <div class="product-card-content">
-                            <h3 class="product-card-title">Bolo Aniversario</h3>
-                            <p class="product-card-description">Massa de baunilha fofinha, recheio cremoso de leite ninho com morangos frescos.</p>
+                            <h3 class="product-card-title">Bolo de Andar</h3>
+                            <p class="product-card-description">Um bolo de andar elegante e imponente, com camadas firmes e bem estruturadas.
+Decorado com detalhes refinados, como flores ou acabamento em pasta americana.
+Cada andar pode trazer um sabor diferente, surpreendendo os convidados.
+Perfeito para casamentos, aniversários e celebrações especiais.</p>
                             <div class="product-card-footer">
-                                <span class="product-card-price">R$ 89,90</span>
-                                <button class="button-secondary">Pedir</button>
+                                <span class="product-card-price">NEGOCIAR</span>
                             </div>
                         </div>
                     </div>
-                    <!-- Produto 2 -->
                     <div class="product-card">
-                        <img src="./imagens/bolo2.png" class="product-card-image" alt="Bolo de Brigadeiro Gourmet">
+                        <img src="./imagens/bolo2.png" alt="Bolo Brigadeiro Belga" class="product-card-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fbcfe8/be185d?text=Bolo+2';">
                         <div class="product-card-content">
-                            <h3 class="product-card-title">Bolo Meme Gourmet</h3>
-                            <p class="product-card-description">Massa de chocolate molhadinha com recheio e cobertura de brigadeiro belga.</p>
+                            <h3 class="product-card-title">Bolo Meme</h3>
+                            <p class="product-card-description">Um bolo divertido e criativo, decorado com temas de memes que fazem todo mundo rir. Colorido e cheio de personalidade, pode trazer frases engraçadas, imagens marcantes da internet ou personagens virais. Perfeito para festas descontraídas, une sabor e humor, garantindo muitas fotos e boas risadas.</p>
                             <div class="product-card-footer">
-                                <span class="product-card-price">R$ 79,90</span>
-                                <button class="button-secondary">Pedir</button>
+                                <span class="product-card-price">NEGOCIAR</span>
                             </div>
                         </div>
                     </div>
-                    <!-- Produto 3 -->
                     <div class="product-card">
-                        <img src="./imagens/bolo3.png" class="product-card-image" alt="Bolo Red Velvet">
+                        <img src="./imagens/bolo3.png" alt="Bolo Red Velvet" class="product-card-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fbcfe8/be185d?text=Bolo+3';">
                         <div class="product-card-content">
-                            <h3 class="product-card-title">Bolo customizável</h3>
-                            <p class="product-card-description">O clássico aveludado vermelho com um recheio suave de cream cheese frosting.</p>
+                            <h3 class="product-card-title">Bolo de Flores</h3>
+                            <p class="product-card-description">Um bolo delicado e sofisticado, decorado com flores que trazem charme e elegância à mesa. As flores, naturais ou de açúcar, acrescentam leveza e um toque romântico, transformando o bolo em uma verdadeira obra de arte. Ideal para casamentos, aniversários e celebrações especiais, combina beleza e sabor em cada detalhe.</p>
                             <div class="product-card-footer">
-                                <span class="product-card-price">R$ 99,90</span>
-                                <button class="button-secondary">Pedir</button>
+                                <span class="product-card-price">NEGOCIAR</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Seções Salgados, Doces e Kits -->
-        <section id="salgados" class="section bg-white text-center">
+
+        <section id="bolos-de-pote" class="section bg-white text-center">
             <div class="container">
-                <h2 class="section-title">Salgados para Festa</h2>
-                <p class="section-subtitle">Coxinhas, bolinhas de queijo, esfihas e muito mais. Peça o cento!</p>
-                <a href="#contato" class="button-primary">Ver Opções</a>
+                <h2 class="section-title">Nossos Bolos de Pote</h2>
+                <p class="section-subtitle">A felicidade em camadas, pronta para levar. Para ver todos os sabores, chame no WhatsApp.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3">
+                    <div class="product-card">
+                        <img src="./imagens/bolo-pote-ninhomorango.png" alt="Bolo de Pote Ninho com Morango" class="product-card-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fbcfe8/be185d?text=Pote+1';">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Ninho com Morango</h3>
+                            <p class="product-card-description">Camadas de massa de baunilha, creme de ninho, morangos frescos e um toque de chantilly.</p>
+                            <div class="product-card-footer">
+                                <span class="product-card-price">R$ 14</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="./imagens/bolo-pote-chocolate.png" alt="Bolo de Pote Brigadeiro" class="product-card-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fbcfe8/be185d?text=Pote+2';">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Brigadeiro Intenso</h3>
+                            <p class="product-card-description">Pura intensidade! Camadas de massa de chocolate molhadinha e brigadeiro cremoso.</p>
+                            <div class="product-card-footer">
+                                <span class="product-card-price">R$ 12</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="./imagens/bolo-pote-abacaxi.png" alt="Bolo de Pote Prestígio" class="product-card-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fbcfe8/be185d?text=Pote+3';">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Abacaxi com Coco</h3>
+                            <p class="product-card-description">A combinação perfeita de massa de baunilha com um recheio super cremoso de doce de abacaxi e coco.</p>
+                            <div class="product-card-footer">
+                                <span class="product-card-price">R$ 12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="doces" class="section text-center">
             <div class="container">
-                <h2 class="section-title">Docinhos Irresistíveis</h2>
-                <p class="section-subtitle">Brigadeiros gourmet, beijinhos, camafeus e outras delícias para sua comemoração.</p>
-                <a href="#contato" class="button-primary">Ver Opções</a>
+                <h2 class="section-title">Docinhos</h2>
+                <p class="section-subtitle">Pequenos tesouros de sabor para sua festa. Para ver o cardápio completo, chame no WhatsApp.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3">
+                    <div class="product-card">
+                        <img src="./imagens/paodemel.png" alt="Pão de mel Gourmet" class="product-card-image">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Pão de mel</h3>
+                            <p class="product-card-description">Um pão de mel macio e aromático, levemente adocicado com especiarias, recheado com um toque suave de doce (como doce de leite ou brigadeiro) e envolvido por uma generosa camada de chocolate que traz brilho, sabor intenso e crocância delicada ao primeiro pedaço.</p>
+                            <div class="product-card-footer">
+                                <span class="product-card-price"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="./imagens/cones-recheados.jpg" alt="Cones recheados" class="product-card-image">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Cones Rechados</h3>
+                            <p class="product-card-description">Cones crocantes de wafer, recheados com cremes irresistíveis como doce de leite, brigadeiro ou Nutella, finalizados com cobertura de chocolate que garante brilho, sabor e uma textura perfeita. Uma combinação que une crocância por fora e cremosidade por dentro.</p>
+                            <div class="product-card-footer">
+                                <span class="product-card-price"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/imagens/doces3.png" alt="Camafeu de Nozes" class="product-card-image">
+                        <div class="product-card-content">
+                            <h3 class="product-card-title">Paçoca com Chocolate</h3>
+                            <p class="product-card-description">Uma deliciosa paçoca cremosa moldada em formato de docinho, envolvida por uma generosa camada de chocolate que realça o sabor do amendoim e traz uma crocância irresistível. A união perfeita entre o doce típico brasileiro e o toque sofisticado do chocolate.</p>
+                            <div class="product-card-footer">
+                                <span class="product-card-price"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="kits" class="section bg-white text-center">
             <div class="container">
-                <h2 class="section-title">Kits Presente e Festa</h2>
-                <p class="section-subtitle">Surpreenda quem você ama ou organize sua festa com nossos kits completos.</p>
-                 <a href="#contato" class="button-primary">Montar meu Kit</a>
+                <h2 class="section-title">Kits Presente</h2>
+                <p class="section-subtitle">Surpreenda quem você ama com nossas caixas e kits montados com muito carinho.</p>
+                <a href="#contato" class="button-primary">Montar meu Kit</a>
             </div>
         </section>
 
-        <!-- Seção Sobre Nós -->
         <section id="sobre-nos" class="section">
             <div class="container">
                 <div class="about-us-grid">
@@ -181,39 +218,37 @@
                     </div>
                     <div class="about-us-content">
                         <h2 class="section-title text-left">Nossa História</h2>
-                        <p class="about-us-text">Olá! Eu sou a Adelia e desde criança sou apaixonada por criar doces que trazem alegria. O que começou como uma brincadeira na cozinha da minha Mãe, com receitas passadas de geração em geração, se tornou a minha grande paixão e profissão.</p>
+                        <p class="about-us-text">Olá! Eu sou a Dedé e desde criança sou apaixonada por criar doces que trazem alegria. O que começou como uma brincadeira na cozinha da minha mãe, com receitas passadas de geração em geração, se tornou a minha grande paixão e profissão.</p>
                         <p class="about-us-text">Na "Bolos da Dedé", cada receita é feita com os melhores ingredientes, muito cuidado e uma dose extra de carinho. Acreditamos que um bolo pode transformar um dia comum em uma celebração e um momento especial em uma memória inesquecível. Obrigada por nos deixar fazer parte da sua história!</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Contato -->
         <section id="contato" class="section bg-rose-100 text-center">
             <div class="container">
                  <h2 class="section-title">Faça seu pedido!</h2>
-                 <p class="section-subtitle">Entre em contato pelo WhatsApp para orçamentos, tirar dúvidas ou montar um pedido especial. Será um prazer atender você!</p>
-                 <a href="https://wa.me/5511980156853?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20pelo%20site%20Bolos%20da%20Dedé." target="_blank" class="button-whatsapp">
+                 <p class="section-subtitle">Entre em contato pelo WhatsApp para orçamentos, pedidos e para tirar suas dúvidas. Será um prazer atender você!</p>
+                 <a href="https://wa.me/5511980156853" target="_blank" class="button-whatsapp">
                     <i data-lucide="whatsapp"></i>
-                    <span>Pedir no WhatsApp</span>
+                    <span>Chamar no WhatsApp</span>
                 </a>
             </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3 class="footer-logo">Bolos da Dedé</h3>
+                    <a href="#" class="footer-logo">Bolos da Dedé</a>
                     <p class="footer-tagline">O sabor do carinho em cada fatia.</p>
                 </div>
                 <div class="footer-col">
-                    <h4 class="footer-col-title">Navegação</h4>
+                    <h4 class="footer-col-title">Navegue</h4>
                     <ul class="footer-links">
                         <li><a href="#bolos">Bolos</a></li>
-                        <li><a href="#salgados">Salgados</a></li>
+                        <li><a href="#bolos-de-pote">Bolos de Pote</a></li>
                         <li><a href="#doces">Doces</a></li>
                         <li><a href="#kits">Kits</a></li>
                         <li><a href="#sobre-nos">Sobre Nós</a></li>
@@ -222,26 +257,22 @@
                  <div class="footer-col">
                     <h4 class="footer-col-title">Contato</h4>
                     <ul class="footer-contact">
-                        <li>WhatsApp: (11) 98015-6853</li>
-                        <li>Email: contato@bolosdadede.com.br</li>
+                        <li>(11) 98015-6853</li>
+                        <li></li>
                     </ul>
                 </div>
-                 <div class="footer-col">
+                <div class="footer-col">
                     <h4 class="footer-col-title">Siga-nos</h4>
                     <div class="footer-socials">
-                        <a href="#"><i data-lucide="instagram"></i></a>
-                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="https://www.instagram.com/bolos_dede"><i data-lucide="instagram"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-copyright">
-                <p>&copy; 2025 Bolos da Dedé. Todos os direitos reservados.</p>
+                &copy; 2025 Bolos da Dedé. Todos os direitos reservados.
             </div>
         </div>
     </footer>
-
-    <!-- Script JavaScript -->
-    <script src="script.js"></script>
-
 </body>
 </html>
+

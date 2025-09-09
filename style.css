@@ -1,18 +1,17 @@
-/* 1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS */
 :root {
-    --color-bg: #fdf2f8; /* rose-50 */
+    --color-bg: #fdf2f8; 
     --color-bg-alt: #ffffff;
-    --color-bg-soft: #fce7f3; /* rose-100 */
-    --color-bg-footer: #fecdd3; /* rose-200 */
-    --color-text-base: #292524; /* stone-800 */
-    --color-text-muted: #57534e; /* stone-600 */
-    --color-primary: #ec4899; /* pink-500 */
-    --color-primary-dark: #db2777; /* pink-600 */
-    --color-primary-light: #fbcfe8; /* pink-200 */
-    --color-primary-extralight: #fce7f3; /* pink-100 */
-    --color-primary-text: #c026d3; /* pink-600 text over pink-100 */
-    --color-whatsapp: #25d366; /* green-500 */
-    --color-whatsapp-dark: #16a34a; /* green-600 */
+    --color-bg-soft: #fce7f3; 
+    --color-bg-footer: #fecdd3; 
+    --color-text-base: #292524; 
+    --color-text-muted: #57534e; 
+    --color-primary: #ec4899; 
+    --color-primary-dark: #db2777; 
+    --color-primary-light: #fbcfe8; 
+    --color-primary-extralight: #fce7f3; 
+    --color-primary-text: #c026d3; 
+    --color-whatsapp: #25d366; 
+    --color-whatsapp-dark: #16a34a; 
 
     --font-primary: 'Inter', sans-serif;
     --font-display: 'Pacifico', cursive;
@@ -29,7 +28,6 @@ body {
     display: none !important;
 }
 
-/* 2. UTILITÁRIOS E COMPONENTES GERAIS */
 .container {
     max-width: 1280px;
     margin-left: auto;
@@ -59,7 +57,6 @@ body {
     .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
-/* 3. CABEÇALHO E NAVEGAÇÃO */
 .header {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(4px);
@@ -159,7 +156,6 @@ body {
     font-weight: 600;
 }
 
-/* 4. SEÇÕES PRINCIPAIS */
 .section {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -184,9 +180,8 @@ body {
     margin-right: auto;
 }
 
-/* 5. SEÇÃO HERO */
 .hero-section {
-    height: calc(80vh - 80px); /* 80px is header height */
+    height: calc(80vh - 80px);
     background-image: url('https://placehold.co/1920x1080/fce7f3/d946ef?text=Bolo+Delicioso');
     background-size: cover;
     background-position: center;
@@ -214,7 +209,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* 6. BOTÕES */
 .button-primary {
     display: inline-block;
     background-color: var(--color-primary);
@@ -262,8 +256,6 @@ body {
     transform: scale(1.05);
 }
 
-
-/* 7. CARDS (Categoria e Produto) */
 .category-card {
     display: block;
     text-decoration: none;
@@ -310,6 +302,9 @@ body {
 }
 .product-card-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 .product-card-title {
     font-size: 1.25rem;
@@ -320,10 +315,11 @@ body {
     color: var(--color-text-muted);
     margin-bottom: 1rem;
     min-height: 50px;
+    flex-grow: 1;
 }
 .product-card-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 .product-card-price {
@@ -332,7 +328,6 @@ body {
     color: var(--color-primary);
 }
 
-/* 8. SEÇÃO SOBRE NÓS */
 .about-us-grid {
     display: grid;
     align-items: center;
@@ -370,7 +365,6 @@ body {
     text-align: left;
 }
 
-/* 9. RODAPÉ */
 .footer {
     background-color: var(--color-bg-footer);
     color: var(--color-text-muted);

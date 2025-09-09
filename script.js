@@ -1,25 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileNavLinks = document.querySelectorAll('.mobile-menu a');
+    const mobileNavLinks = mobileMenu.querySelectorAll('.mobile-nav-link, .mobile-nav-button');
 
-    const toggleMenu = () => {
-        mobileMenu.classList.toggle('hidden');
-        lucide.createIcons(); 
-    };
+    lucide.createIcons();
 
-    if (menuBtn) {
-        menuBtn.addEventListener('click', toggleMenu);
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     }
 
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (!mobileMenu.classList.contains('hidden')) {
-                toggleMenu();
-            }
+            mobileMenu.classList.add('hidden');
         });
     });
-
-    lucide.createIcons();
 });
 
